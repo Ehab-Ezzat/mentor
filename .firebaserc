@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mentor-3ae22": {
+      "hosting": {
+        "mentor": [
+          "mentor-3ae22"
+        ]
+      }
+    }
+  }
+}

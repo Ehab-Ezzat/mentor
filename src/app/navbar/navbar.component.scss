@@ -1,0 +1,32 @@
+.navbar {
+    input {
+        border-radius: 5rem;
+        transition: all .2s linear;
+        width: 30rem;
+        &:focus {
+            width: 40rem;
+        }
+    }
+    .m-side {
+        mat-icon {
+            position: absolute;
+            z-index: 55;
+            color: #333;
+            right: 10px;
+            top: 7px;
+        }
+    }
+
+    .l-side {
+        li {
+            &:not(:last-of-type) {
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+
+
+.col-md-2 {
+    max-width: 16.66667% !important;
+}

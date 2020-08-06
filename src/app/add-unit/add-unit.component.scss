@@ -1,0 +1,30 @@
+@import '../../assets/vars';
+
+.example-form {
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .add-contacts {
+      .add-title {
+          margin-bottom: 0 !important;
+      }
+      .added-contacts {
+        .added-contact {
+            img {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                margin: 0 1rem;
+                cursor: pointer;
+                &.active {
+                    border: 1px solid #333;
+                }
+            }
+        }
+      }
+  }
+  

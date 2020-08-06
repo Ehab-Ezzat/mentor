@@ -1,0 +1,15 @@
+@import '../assets/vars';
+
+.add-unit-btn {
+    width: 4.5rem;
+    height: 4.5rem;
+    color: $primary;
+    background: #fff;
+    position: fixed;
+    right: 5rem;
+    bottom: 5rem;
+}
+
+.mat-icon {
+  width: unset !important;
+}

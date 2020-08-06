@@ -1,0 +1,64 @@
+.unit {
+    width: 75%;
+    background: rgba(#fff,.1);
+    height: 45rem;
+    .material-icons {
+        margin-right: .6rem;
+    }
+    .location {
+        margin-bottom: .4rem;
+    }
+
+    .social-icons {
+        color: #fff;
+        i {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+        }
+        .facebook {
+            background: #3b5998;
+        }
+        .linkedin {
+            background: #0077b5;
+        }
+    }
+
+    .info {
+        & > div {
+            padding: .5rem;
+        }
+        .background {
+            background: rgba(#fff,.1);
+        }
+    }
+
+    .m-section {
+        border-right: 1px solid #94939359;
+        border-left: 1px solid #94939359;
+        padding: 0 1.5rem;
+    }
+
+    .contacts {
+        .flex {
+            flex-wrap: wrap;
+        }
+        .contact {
+            text-align: center;
+            flex: 1 1 20%;
+            max-width: 20%;
+            margin-bottom: 1rem;
+            img {
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .show-contact {
+        .type {
+            margin: 1rem 0;
+        }
+    }
+}

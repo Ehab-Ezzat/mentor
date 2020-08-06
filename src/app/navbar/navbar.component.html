@@ -1,0 +1,65 @@
+<div class="navbar pt-2">
+    <div class="container">
+        <div class="flex aic jcsb">
+            <div class="r-side">
+                <a routerLink="/">Logo</a>
+            </div>
+            <div class="m-side relative">
+                <input type="search" placeholder="Search for you next employer..." class="pl-2 pr-4 py-1 dark w-100">
+                <mat-icon>search</mat-icon>
+            </div>
+            <div class="l-side pointer" [matMenuTriggerFor]="menu">
+                <mat-icon class="fs-30">widgets</mat-icon>
+                <!-- <ul class="flex">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<mat-menu #menu="matMenu">
+    <div class="flex-grid p-1 px-3">
+        <div routerLink="units/about" class="col-md-2 dark" mat-menu-item>
+            <a>About</a>
+        </div>
+        <div routerLink="units/auditfirm" class="col-md-2 dark" mat-menu-item>
+            <a>Auditfirm</a>
+        </div>
+        <div routerLink="units/banks" class="col-md-2 dark" mat-menu-item>
+            <a>Banks</a>
+        </div>
+        <div routerLink="units/gov" class="col-md-2 dark" mat-menu-item>
+            <a>Gov</a>
+        </div>
+        <div routerLink="units/petrolum" class="col-md-2 dark" mat-menu-item>
+            <a>Petrolum</a>
+        </div>
+        <div routerLink="units/multinational" class="col-md-2 dark" mat-menu-item>
+            <a>Multinational</a>
+        </div>
+        <div routerLink="units/insurance" class="col-md-2 dark" mat-menu-item>
+            <a>Insurance</a>
+        </div>
+        <div routerLink="units/companies" class="col-md-2 dark" mat-menu-item>
+            <a>Companies</a>
+        </div>
+        <div routerLink="units/groups" class="col-md-2 dark" mat-menu-item>
+            <a>Groups</a>
+        </div>
+    </div>
+</mat-menu>
+
+
+
+

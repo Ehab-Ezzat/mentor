@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/aio.css';
+@import './assets/vars';
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: $primary;
+  color: white;
+}
+
+.mat-icon {
+  height: unset !important;
+}
+
+.mat-menu-panel {
+  overflow: unset !important;
+  max-width: unset !important;
+}
+
+.mat-menu-content {
+  width: 1115px !important;
+  height: 45rem;
+}
+
+.mat-dialog-container {
+  width: 80rem !important;
+}

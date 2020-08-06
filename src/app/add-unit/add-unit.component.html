@@ -1,0 +1,114 @@
+<h2 mat-dialog-title>Add Unit</h2>
+<mat-dialog-content class="mat-typography">
+  <form class="example-form" [formGroup]="addUnitFG">
+    <div class="flex-grid" id='grid-1'>
+      <div class="col-md-4">
+        <mat-form-field class="example-full-width">
+          <mat-label>Unit name</mat-label>
+          <input matInput formControlName='unit_name' #unit_name placeholder="Unit name">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="example-full-width">
+          <mat-label>Offical website</mat-label>
+          <input matInput formControlName='website' #website placeholder="Offical website">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="example-full-width">
+          <mat-label>Bussiness type</mat-label>
+          <input matInput formControlName='type' #type placeholder="Bussiness type">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="example-full-width">
+          <mat-label>Address</mat-label>
+          <input matInput formControlName='address' #address placeholder="Address">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4" formArrayName='emails' *ngFor="let email of emails.controls; let i=index">
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput [formControlName]='i' placeholder="Email">
+            <mat-icon matSuffix class="icon-change pointer" (click)='addEmails()'>add</mat-icon>
+          </mat-form-field>
+      </div>
+      <div class='col-md-4' formArrayName="phones" *ngFor="let phone of phones.controls; let i=index">
+        <div >
+          <mat-form-field class="example-full-width">
+            <mat-label>Phone No.</mat-label>
+            <span matPrefix>+2 &nbsp;</span>
+            <input type="tel" matInput [formControlName]='i' placeholder="555-555-1234">
+            <mat-icon matSuffix class='icon-change pointer' (click)='addPhones()'>add</mat-icon>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-md-4" formArrayName="faxs" *ngFor="let fax of faxs.controls; let i=index">
+        <mat-form-field class="example-full-width">
+          <mat-label>Fax No.</mat-label>
+          <input matInput [formControlName]='i' placeholder="Fax No.">
+          <mat-icon matSuffix class="icon-change pointer" (click)='addFaxs()'>add</mat-icon>
+        </mat-form-field>
+      </div>
+    </div>
+
+  </form>  
+    <button mat-raised-button color="primary" type="button" class="w-100" (click)='add_contact = true' *ngIf="add_contact == false">Add contacts</button>
+  <form class="example-form" *ngIf="add_contact == true" [formGroup]='addContactsFG'>
+    <div class="add-contacts">
+      <hr class="border-light">
+      <h2 mat-dialog-title class="add-title">Add Contact</h2>
+      <!-- <div class="added-contacts flex-center">
+        <div class="added-contact">
+          <img src="../../assets/person.png" class="active" alt="Contact pic">
+        </div>
+      </div> -->
+      
+      <div class="flex-grid">
+        <div class="col-md-4">
+          <mat-form-field class="example-full-width">
+            <mat-label>Contact name</mat-label>
+            <input matInput placeholder="Contact name" formControlName='contact_name'>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="example-full-width">
+            <mat-label>Title</mat-label>
+            <input matInput placeholder="Title" formControlName='title'>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4" formArrayName='contact_phones' *ngFor="let phone of contact_phones.controls; let i=index">
+          <mat-form-field class="example-full-width">
+            <mat-label>phone No.</mat-label>
+            <input matInput placeholder="phone No." [formControlName]='i'>
+            <mat-icon matSuffix class="icon-change pointer" (click)='addContactPhones()'>add</mat-icon>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4" formArrayName='contact_emails' *ngFor="let email of contact_emails.controls; let i=index">
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" [formControlName]='i'>
+            <mat-icon matSuffix class="icon-change pointer" (click)='addContactEmails()'>add</mat-icon>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="example-full-width">
+            <mat-label>Facebook link</mat-label>
+            <input matInput placeholder="Facebook link" formControlName='facebook'>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="example-full-width">
+            <mat-label>Linkedin link</mat-label>
+            <input matInput placeholder="Linkedin link" formControlName='linkedin'>
+          </mat-form-field>
+        </div>
+     </div>
+    </div>
+    <button mat-raised-button color="primary" type="button" (click)='addContact(addContactsFG)'>Save</button>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button cdkFocusInitial class="background" (click)='addUnit(addUnitFG)'>Save</button>
+</mat-dialog-actions>
